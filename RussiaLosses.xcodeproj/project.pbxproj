@@ -16,6 +16,9 @@
 		FFD8915C2A965B7B00ACA175 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFD8915E2A965B7B00ACA175 /* Localizable.strings */; };
 		FFD891752A96610300ACA175 /* Strings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD891732A96610300ACA175 /* Strings.generated.swift */; };
 		FFD891762A96610300ACA175 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD891742A96610300ACA175 /* Assets.generated.swift */; };
+		FFD8917B2A96721500ACA175 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8917A2A96721500ACA175 /* LoadingViewController.swift */; };
+		FFD8917E2A96723700ACA175 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FFD8917D2A96723700ACA175 /* SnapKit */; };
+		FFD891812A967B7100ACA175 /* LoadingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD891802A967B7100ACA175 /* LoadingConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,8 @@
 		FFD8915D2A965B7B00ACA175 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FFD891732A96610300ACA175 /* Strings.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.generated.swift; sourceTree = "<group>"; };
 		FFD891742A96610300ACA175 /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
+		FFD8917A2A96721500ACA175 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		FFD891802A967B7100ACA175 /* LoadingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD8917E2A96723700ACA175 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +68,7 @@
 		FFD8913D2A96599600ACA175 /* RussiaLosses */ = {
 			isa = PBXGroup;
 			children = (
+				FFD891772A96714800ACA175 /* Flow */,
 				FFD891532A965A2500ACA175 /* Resources */,
 				FFD891522A9659CF00ACA175 /* App */,
 			);
@@ -116,6 +123,39 @@
 			path = Swiftgen;
 			sourceTree = "<group>";
 		};
+		FFD891772A96714800ACA175 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				FFD891782A96716300ACA175 /* Loading */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		FFD891782A96716300ACA175 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				FFD8917F2A967B5F00ACA175 /* Model */,
+				FFD891792A9671BB00ACA175 /* View */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		FFD891792A9671BB00ACA175 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFD8917A2A96721500ACA175 /* LoadingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFD8917F2A967B5F00ACA175 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFD891802A967B7100ACA175 /* LoadingConstants.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +174,9 @@
 			dependencies = (
 			);
 			name = RussiaLosses;
+			packageProductDependencies = (
+				FFD8917D2A96723700ACA175 /* SnapKit */,
+			);
 			productName = RussiaLosses;
 			productReference = FFD8913B2A96599600ACA175 /* RussiaLosses.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +205,9 @@
 				Base,
 			);
 			mainGroup = FFD891322A96599600ACA175;
+			packageReferences = (
+				FFD8917C2A96723700ACA175 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = FFD8913C2A96599600ACA175 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,7 +280,9 @@
 			files = (
 				FFD891752A96610300ACA175 /* Strings.generated.swift in Sources */,
 				FFD891762A96610300ACA175 /* Assets.generated.swift in Sources */,
+				FFD8917B2A96721500ACA175 /* LoadingViewController.swift in Sources */,
 				FFD8913F2A96599600ACA175 /* AppDelegate.swift in Sources */,
+				FFD891812A967B7100ACA175 /* LoadingConstants.swift in Sources */,
 				FFD891412A96599600ACA175 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +505,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FFD8917C2A96723700ACA175 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FFD8917D2A96723700ACA175 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFD8917C2A96723700ACA175 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FFD891332A96599600ACA175 /* Project object */;
 }
