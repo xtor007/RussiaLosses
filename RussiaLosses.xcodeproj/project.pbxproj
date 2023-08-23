@@ -11,6 +11,11 @@
 		FFD891412A96599600ACA175 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD891402A96599600ACA175 /* SceneDelegate.swift */; };
 		FFD891482A96599E00ACA175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD891472A96599E00ACA175 /* Assets.xcassets */; };
 		FFD8914B2A96599E00ACA175 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD891492A96599E00ACA175 /* LaunchScreen.storyboard */; };
+		FFD891552A965AC600ACA175 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD891542A965AC600ACA175 /* Images.xcassets */; };
+		FFD891582A965AE100ACA175 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD891572A965AE100ACA175 /* Colors.xcassets */; };
+		FFD8915C2A965B7B00ACA175 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFD8915E2A965B7B00ACA175 /* Localizable.strings */; };
+		FFD891752A96610300ACA175 /* Strings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD891732A96610300ACA175 /* Strings.generated.swift */; };
+		FFD891762A96610300ACA175 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD891742A96610300ACA175 /* Assets.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		FFD891472A96599E00ACA175 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFD8914A2A96599E00ACA175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFD8914C2A96599E00ACA175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFD891542A965AC600ACA175 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FFD891572A965AE100ACA175 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		FFD8915D2A965B7B00ACA175 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FFD891732A96610300ACA175 /* Strings.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.generated.swift; sourceTree = "<group>"; };
+		FFD891742A96610300ACA175 /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +82,38 @@
 		FFD891532A965A2500ACA175 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FFD891472A96599E00ACA175 /* Assets.xcassets */,
+				FFD891602A965D8900ACA175 /* Swiftgen */,
+				FFD891592A965B6700ACA175 /* Localize */,
+				FFD891562A965ACB00ACA175 /* Assets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FFD891562A965ACB00ACA175 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FFD891542A965AC600ACA175 /* Images.xcassets */,
+				FFD891472A96599E00ACA175 /* Assets.xcassets */,
+				FFD891572A965AE100ACA175 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FFD891592A965B6700ACA175 /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				FFD8915E2A965B7B00ACA175 /* Localizable.strings */,
+			);
+			path = Localize;
+			sourceTree = "<group>";
+		};
+		FFD891602A965D8900ACA175 /* Swiftgen */ = {
+			isa = PBXGroup;
+			children = (
+				FFD891742A96610300ACA175 /* Assets.generated.swift */,
+				FFD891732A96610300ACA175 /* Strings.generated.swift */,
+			);
+			path = Swiftgen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +123,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFD8914F2A96599E00ACA175 /* Build configuration list for PBXNativeTarget "RussiaLosses" */;
 			buildPhases = (
+				FFD8915F2A965C5400ACA175 /* [SwiftGen] Generate Resources */,
+				FFD891672A965DCE00ACA175 /* [SwiftLint] Validate Sources */,
 				FFD891372A96599600ACA175 /* Sources */,
 				FFD891382A96599600ACA175 /* Frameworks */,
 				FFD891392A96599600ACA175 /* Resources */,
@@ -135,6 +176,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD8915C2A965B7B00ACA175 /* Localizable.strings in Resources */,
+				FFD891552A965AC600ACA175 /* Images.xcassets in Resources */,
+				FFD891582A965AE100ACA175 /* Colors.xcassets in Resources */,
 				FFD8914B2A96599E00ACA175 /* LaunchScreen.storyboard in Resources */,
 				FFD891482A96599E00ACA175 /* Assets.xcassets in Resources */,
 			);
@@ -142,11 +186,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FFD8915F2A965C5400ACA175 /* [SwiftGen] Generate Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[SwiftGen] Generate Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftgen >/dev/null; then\n  swiftgen\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
+		FFD891672A965DCE00ACA175 /* [SwiftLint] Validate Sources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[SwiftLint] Validate Sources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FFD891372A96599600ACA175 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD891752A96610300ACA175 /* Strings.generated.swift in Sources */,
+				FFD891762A96610300ACA175 /* Assets.generated.swift in Sources */,
 				FFD8913F2A96599600ACA175 /* AppDelegate.swift in Sources */,
 				FFD891412A96599600ACA175 /* SceneDelegate.swift in Sources */,
 			);
@@ -161,6 +248,14 @@
 				FFD8914A2A96599E00ACA175 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FFD8915E2A965B7B00ACA175 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFD8915D2A965B7B00ACA175 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

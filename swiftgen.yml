@@ -1,0 +1,14 @@
+xcassets:
+  - inputs:
+    - RussiaLosses/Resources/Assets
+    outputs:
+      - templateName: swift5
+        output: RussiaLosses/Resources/Swiftgen/Assets.generated.swift
+
+strings:
+  inputs: RussiaLosses/Resources/Localize/en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: RussiaLosses/Resources/Swiftgen/Strings.generated.swift
+      params:
+        enumName: Strings
