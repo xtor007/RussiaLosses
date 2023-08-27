@@ -18,10 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         let loadingVC = LoadingViewController()
         window?.rootViewController = loadingVC
-        dataService.fetchDataFromInet { result in
+        dataService.fetchDataFromInet { [weak self] result in
             switch result {
             case .success(let losses):
-                print(losses)
+                let mainVC = MainViewController(viewModel: MainViewModel(losses: losses))
+                self?.window?.rootViewController = mainVC
             case .failure(let error):
                 print(error)
             }

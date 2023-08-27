@@ -24,10 +24,15 @@ class DataService {
                 let equipmentNetworkService = NetworkService(request: equipmentRequest)
                 let equipmentData: [LossesEquipment] = try await equipmentNetworkService.makeRequest()
 
-                completionHandler(.success(try combineData(personnelData: personnelData, equipmentData: equipmentData)))
+                let losses = try combineData(personnelData: personnelData, equipmentData: equipmentData)
+                DispatchQueue.main.async {
+                    completionHandler(.success(losses))
+                }
 
             } catch {
-                completionHandler(.failure(error))
+                DispatchQueue.main.async {
+                    completionHandler(.failure(error))
+                }
             }
         }
     }

@@ -14,6 +14,12 @@
 		FFBB39742A97C312002169C6 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB39732A97C312002169C6 /* DataError.swift */; };
 		FFBB397E2A98D1EE002169C6 /* Losses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB397D2A98D1EE002169C6 /* Losses.swift */; };
 		FFBB39812A98D5B8002169C6 /* Int+OptionalMinus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB39802A98D5B8002169C6 /* Int+OptionalMinus.swift */; };
+		FFBB39862A9B75AE002169C6 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB39852A9B75AE002169C6 /* MainViewModel.swift */; };
+		FFBB39882A9B76D6002169C6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB39872A9B76D6002169C6 /* MainViewController.swift */; };
+		FFBB398A2A9B7797002169C6 /* CurrentLossesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB39892A9B7797002169C6 /* CurrentLossesView.swift */; };
+		FFBB398D2A9B7945002169C6 /* MainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB398C2A9B7945002169C6 /* MainConstants.swift */; };
+		FFBB398F2A9B7ECB002169C6 /* HeaderConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB398E2A9B7ECB002169C6 /* HeaderConstants.swift */; };
+		FFBB39912A9B8522002169C6 /* UIFont+BoldItalicFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB39902A9B8522002169C6 /* UIFont+BoldItalicFont.swift */; };
 		FFD8913F2A96599600ACA175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8913E2A96599600ACA175 /* AppDelegate.swift */; };
 		FFD891412A96599600ACA175 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD891402A96599600ACA175 /* SceneDelegate.swift */; };
 		FFD891482A96599E00ACA175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD891472A96599E00ACA175 /* Assets.xcassets */; };
@@ -37,6 +43,12 @@
 		FFBB39732A97C312002169C6 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		FFBB397D2A98D1EE002169C6 /* Losses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Losses.swift; sourceTree = "<group>"; };
 		FFBB39802A98D5B8002169C6 /* Int+OptionalMinus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+OptionalMinus.swift"; sourceTree = "<group>"; };
+		FFBB39852A9B75AE002169C6 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FFBB39872A9B76D6002169C6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FFBB39892A9B7797002169C6 /* CurrentLossesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLossesView.swift; sourceTree = "<group>"; };
+		FFBB398C2A9B7945002169C6 /* MainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstants.swift; sourceTree = "<group>"; };
+		FFBB398E2A9B7ECB002169C6 /* HeaderConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderConstants.swift; sourceTree = "<group>"; };
+		FFBB39902A9B8522002169C6 /* UIFont+BoldItalicFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+BoldItalicFont.swift"; sourceTree = "<group>"; };
 		FFD8913B2A96599600ACA175 /* RussiaLosses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RussiaLosses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD8913E2A96599600ACA175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD891402A96599600ACA175 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,8 +108,45 @@
 			isa = PBXGroup;
 			children = (
 				FFBB39802A98D5B8002169C6 /* Int+OptionalMinus.swift */,
+				FFBB39902A9B8522002169C6 /* UIFont+BoldItalicFont.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		FFBB39822A9B74F0002169C6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FFBB398B2A9B7935002169C6 /* Model */,
+				FFBB39842A9B759B002169C6 /* ViewModel */,
+				FFBB39832A9B7590002169C6 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FFBB39832A9B7590002169C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFBB39872A9B76D6002169C6 /* MainViewController.swift */,
+				FFBB39892A9B7797002169C6 /* CurrentLossesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFBB39842A9B759B002169C6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFBB39852A9B75AE002169C6 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FFBB398B2A9B7935002169C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFBB398C2A9B7945002169C6 /* MainConstants.swift */,
+				FFBB398E2A9B7ECB002169C6 /* HeaderConstants.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FFD891322A96599600ACA175 = {
@@ -178,6 +227,7 @@
 		FFD891772A96714800ACA175 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				FFBB39822A9B74F0002169C6 /* Main */,
 				FFD891782A96716300ACA175 /* Loading */,
 			);
 			path = Flow;
@@ -358,17 +408,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBB398D2A9B7945002169C6 /* MainConstants.swift in Sources */,
 				FFD891852A968A7300ACA175 /* LossesEquipment.swift in Sources */,
 				FFD891752A96610300ACA175 /* Strings.generated.swift in Sources */,
+				FFBB398F2A9B7ECB002169C6 /* HeaderConstants.swift in Sources */,
 				FFD891762A96610300ACA175 /* Assets.generated.swift in Sources */,
 				FFD8917B2A96721500ACA175 /* LoadingViewController.swift in Sources */,
 				FFBB39812A98D5B8002169C6 /* Int+OptionalMinus.swift in Sources */,
+				FFBB39862A9B75AE002169C6 /* MainViewModel.swift in Sources */,
 				FFBB396D2A97BBD1002169C6 /* NetworkService.swift in Sources */,
+				FFBB39882A9B76D6002169C6 /* MainViewController.swift in Sources */,
 				FFBB39722A97BC8C002169C6 /* DataService.swift in Sources */,
 				FFBB397E2A98D1EE002169C6 /* Losses.swift in Sources */,
 				FFBB39742A97C312002169C6 /* DataError.swift in Sources */,
+				FFBB398A2A9B7797002169C6 /* CurrentLossesView.swift in Sources */,
 				FFD8913F2A96599600ACA175 /* AppDelegate.swift in Sources */,
 				FFD891812A967B7100ACA175 /* LoadingConstants.swift in Sources */,
+				FFBB39912A9B8522002169C6 /* UIFont+BoldItalicFont.swift in Sources */,
 				FFD891412A96599600ACA175 /* SceneDelegate.swift in Sources */,
 				FFBB39692A97BADE002169C6 /* LossesPersonnel.swift in Sources */,
 				FFBB396F2A97BBFD002169C6 /* NetworkError.swift in Sources */,
