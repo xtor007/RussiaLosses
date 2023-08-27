@@ -8,7 +8,7 @@
 import Foundation
 
 extension Int? {
-    static func -(lhs: Int, rhs: Int?) -> Int? {
+    static func - (lhs: Int, rhs: Int?) -> Int? {
         guard let rhs else {
             return nil
         }

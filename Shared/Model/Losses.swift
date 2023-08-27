@@ -69,7 +69,6 @@ enum LossesCategory: CaseIterable {
             value = obj.cruiseMissiles
         }
 
-        
         guard let value else {
             return nil
         }

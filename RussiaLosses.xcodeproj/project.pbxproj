@@ -20,6 +20,10 @@
 		FFBB398D2A9B7945002169C6 /* MainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB398C2A9B7945002169C6 /* MainConstants.swift */; };
 		FFBB398F2A9B7ECB002169C6 /* HeaderConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB398E2A9B7ECB002169C6 /* HeaderConstants.swift */; };
 		FFBB39912A9B8522002169C6 /* UIFont+BoldItalicFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB39902A9B8522002169C6 /* UIFont+BoldItalicFont.swift */; };
+		FFBB39932A9B8E02002169C6 /* LossesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB39922A9B8E02002169C6 /* LossesCell.swift */; };
+		FFBB39952A9B90AB002169C6 /* LossesTableConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB39942A9B90AB002169C6 /* LossesTableConstants.swift */; };
+		FFBB39992A9BEA82002169C6 /* MainLossesTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB39982A9BEA82002169C6 /* MainLossesTableDelegate.swift */; };
+		FFBB399B2A9BEB90002169C6 /* MainLossesTableDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB399A2A9BEB90002169C6 /* MainLossesTableDataSourse.swift */; };
 		FFD8913F2A96599600ACA175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8913E2A96599600ACA175 /* AppDelegate.swift */; };
 		FFD891412A96599600ACA175 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD891402A96599600ACA175 /* SceneDelegate.swift */; };
 		FFD891482A96599E00ACA175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD891472A96599E00ACA175 /* Assets.xcassets */; };
@@ -49,6 +53,10 @@
 		FFBB398C2A9B7945002169C6 /* MainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstants.swift; sourceTree = "<group>"; };
 		FFBB398E2A9B7ECB002169C6 /* HeaderConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderConstants.swift; sourceTree = "<group>"; };
 		FFBB39902A9B8522002169C6 /* UIFont+BoldItalicFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+BoldItalicFont.swift"; sourceTree = "<group>"; };
+		FFBB39922A9B8E02002169C6 /* LossesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesCell.swift; sourceTree = "<group>"; };
+		FFBB39942A9B90AB002169C6 /* LossesTableConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesTableConstants.swift; sourceTree = "<group>"; };
+		FFBB39982A9BEA82002169C6 /* MainLossesTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLossesTableDelegate.swift; sourceTree = "<group>"; };
+		FFBB399A2A9BEB90002169C6 /* MainLossesTableDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLossesTableDataSourse.swift; sourceTree = "<group>"; };
 		FFD8913B2A96599600ACA175 /* RussiaLosses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RussiaLosses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD8913E2A96599600ACA175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD891402A96599600ACA175 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +136,7 @@
 			children = (
 				FFBB39872A9B76D6002169C6 /* MainViewController.swift */,
 				FFBB39892A9B7797002169C6 /* CurrentLossesView.swift */,
+				FFBB39922A9B8E02002169C6 /* LossesCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,10 +152,29 @@
 		FFBB398B2A9B7935002169C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FFBB398C2A9B7945002169C6 /* MainConstants.swift */,
-				FFBB398E2A9B7ECB002169C6 /* HeaderConstants.swift */,
+				FFBB39972A9BEA62002169C6 /* Table */,
+				FFBB39962A9BEA0C002169C6 /* Constants */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FFBB39962A9BEA0C002169C6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FFBB39942A9B90AB002169C6 /* LossesTableConstants.swift */,
+				FFBB398E2A9B7ECB002169C6 /* HeaderConstants.swift */,
+				FFBB398C2A9B7945002169C6 /* MainConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		FFBB39972A9BEA62002169C6 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				FFBB39982A9BEA82002169C6 /* MainLossesTableDelegate.swift */,
+				FFBB399A2A9BEB90002169C6 /* MainLossesTableDataSourse.swift */,
+			);
+			path = Table;
 			sourceTree = "<group>";
 		};
 		FFD891322A96599600ACA175 = {
@@ -409,7 +437,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFBB398D2A9B7945002169C6 /* MainConstants.swift in Sources */,
+				FFBB39992A9BEA82002169C6 /* MainLossesTableDelegate.swift in Sources */,
 				FFD891852A968A7300ACA175 /* LossesEquipment.swift in Sources */,
+				FFBB39932A9B8E02002169C6 /* LossesCell.swift in Sources */,
 				FFD891752A96610300ACA175 /* Strings.generated.swift in Sources */,
 				FFBB398F2A9B7ECB002169C6 /* HeaderConstants.swift in Sources */,
 				FFD891762A96610300ACA175 /* Assets.generated.swift in Sources */,
@@ -422,8 +452,10 @@
 				FFBB397E2A98D1EE002169C6 /* Losses.swift in Sources */,
 				FFBB39742A97C312002169C6 /* DataError.swift in Sources */,
 				FFBB398A2A9B7797002169C6 /* CurrentLossesView.swift in Sources */,
+				FFBB39952A9B90AB002169C6 /* LossesTableConstants.swift in Sources */,
 				FFD8913F2A96599600ACA175 /* AppDelegate.swift in Sources */,
 				FFD891812A967B7100ACA175 /* LoadingConstants.swift in Sources */,
+				FFBB399B2A9BEB90002169C6 /* MainLossesTableDataSourse.swift in Sources */,
 				FFBB39912A9B8522002169C6 /* UIFont+BoldItalicFont.swift in Sources */,
 				FFD891412A96599600ACA175 /* SceneDelegate.swift in Sources */,
 				FFBB39692A97BADE002169C6 /* LossesPersonnel.swift in Sources */,

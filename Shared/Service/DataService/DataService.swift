@@ -97,7 +97,7 @@ class DataService {
             throw DataError.cantConvertDate
         }
     }
-    
+
     private func transformLosses(_ losses: LossesEquipment) -> [CategoryLosses] {
         return LossesCategory.allCases.compactMap({ $0.fetchData(from: losses) })
     }

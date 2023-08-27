@@ -12,7 +12,7 @@ class MainViewModel {
     let losses: [Losses]
 
     init(losses: [Losses]) {
-        self.losses = losses
+        self.losses = losses.reversed()
     }
 
 }

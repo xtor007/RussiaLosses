@@ -15,6 +15,10 @@ class MainViewController: UIViewController {
     private let viewModel: MainViewModel
 
     private var headerView: CurrentLossesView!
+    private var lossesTable: UITableView!
+
+    private lazy var tableDelegate = MainLossesTableDelegate(didSelectRow: cellTap(_:))
+    private lazy var tableDataSource = MainLossesTableDataSourse(losses: viewModel.losses)
 
     // MARK: Life
 
@@ -41,15 +45,38 @@ class MainViewController: UIViewController {
 
     private func makeUI() {
         setupHeader()
+        setupTableView()
     }
 
     private func setupHeader() {
-        headerView = CurrentLossesView(losses: viewModel.losses.last!.personnelLosses.losses)
+        headerView = CurrentLossesView(losses: viewModel.losses.first!.personnelLosses.losses)
         view.addSubview(headerView)
         headerView.snp.makeConstraints { make in
             make.leading.top.trailing.equalToSuperview()
             make.height.equalTo(MainConstants.headerHeight)
         }
+    }
+
+    private func setupTableView() {
+        lossesTable = UITableView()
+        lossesTable.backgroundColor = .clear
+        lossesTable.separatorColor = .clear
+        lossesTable.showsVerticalScrollIndicator = false
+        lossesTable.register(LossesCell.self, forCellReuseIdentifier: LossesCell.cellId)
+        lossesTable.delegate = tableDelegate
+        lossesTable.dataSource = tableDataSource
+        view.addSubview(lossesTable)
+        lossesTable.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.top.equalTo(headerView.snp.bottom).offset(MainConstants.tableVerticalPadding)
+            make.bottom.equalTo(-MainConstants.tableVerticalPadding)
+        }
+    }
+
+    // MARK: Actions
+
+    private func cellTap(_ cellIndex: Int) {
+        print(cellIndex)
     }
 
 }
