@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 let mainVC = MainViewController(viewModel: MainViewModel(losses: losses))
                 self?.window?.rootViewController = UINavigationController(rootViewController: mainVC)
             case .failure(let error):
-                print(error)
+                print(error) // TODO: Handle error
             }
         }
         window?.makeKeyAndVisible()
