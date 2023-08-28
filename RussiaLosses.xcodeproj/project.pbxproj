@@ -37,6 +37,12 @@
 		FFD8917E2A96723700ACA175 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FFD8917D2A96723700ACA175 /* SnapKit */; };
 		FFD891812A967B7100ACA175 /* LoadingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD891802A967B7100ACA175 /* LoadingConstants.swift */; };
 		FFD891852A968A7300ACA175 /* LossesEquipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD891842A968A7300ACA175 /* LossesEquipment.swift */; };
+		FFDB5D5A2A9C0CFB001AC229 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDB5D592A9C0CFB001AC229 /* StatisticViewController.swift */; };
+		FFDB5D5D2A9C108B001AC229 /* StatisticConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDB5D5C2A9C108B001AC229 /* StatisticConstants.swift */; };
+		FFDB5D5F2A9C162E001AC229 /* StatisticCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDB5D5E2A9C162E001AC229 /* StatisticCell.swift */; };
+		FFDB5D612A9C1843001AC229 /* StatisticTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDB5D602A9C1843001AC229 /* StatisticTableViewDelegate.swift */; };
+		FFDB5D632A9C189F001AC229 /* StatisticTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDB5D622A9C189F001AC229 /* StatisticTableViewDataSource.swift */; };
+		FFDB5D652A9C1F16001AC229 /* LossesCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDB5D642A9C1F16001AC229 /* LossesCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +77,12 @@
 		FFD8917A2A96721500ACA175 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		FFD891802A967B7100ACA175 /* LoadingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingConstants.swift; sourceTree = "<group>"; };
 		FFD891842A968A7300ACA175 /* LossesEquipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesEquipment.swift; sourceTree = "<group>"; };
+		FFDB5D592A9C0CFB001AC229 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		FFDB5D5C2A9C108B001AC229 /* StatisticConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticConstants.swift; sourceTree = "<group>"; };
+		FFDB5D5E2A9C162E001AC229 /* StatisticCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticCell.swift; sourceTree = "<group>"; };
+		FFDB5D602A9C1843001AC229 /* StatisticTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewDelegate.swift; sourceTree = "<group>"; };
+		FFDB5D622A9C189F001AC229 /* StatisticTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewDataSource.swift; sourceTree = "<group>"; };
+		FFDB5D642A9C1F16001AC229 /* LossesCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +267,7 @@
 		FFD891772A96714800ACA175 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				FFDB5D572A9C0CDA001AC229 /* Statistic */,
 				FFBB39822A9B74F0002169C6 /* Main */,
 				FFD891782A96716300ACA175 /* Loading */,
 			);
@@ -301,6 +314,7 @@
 			children = (
 				FFD891862A968C0700ACA175 /* Codable */,
 				FFBB397D2A98D1EE002169C6 /* Losses.swift */,
+				FFDB5D642A9C1F16001AC229 /* LossesCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -312,6 +326,34 @@
 				FFBB39682A97BADE002169C6 /* LossesPersonnel.swift */,
 			);
 			path = Codable;
+			sourceTree = "<group>";
+		};
+		FFDB5D572A9C0CDA001AC229 /* Statistic */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB5D5B2A9C107A001AC229 /* Model */,
+				FFDB5D582A9C0CE3001AC229 /* View */,
+			);
+			path = Statistic;
+			sourceTree = "<group>";
+		};
+		FFDB5D582A9C0CE3001AC229 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB5D592A9C0CFB001AC229 /* StatisticViewController.swift */,
+				FFDB5D5E2A9C162E001AC229 /* StatisticCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFDB5D5B2A9C107A001AC229 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB5D5C2A9C108B001AC229 /* StatisticConstants.swift */,
+				FFDB5D602A9C1843001AC229 /* StatisticTableViewDelegate.swift */,
+				FFDB5D622A9C189F001AC229 /* StatisticTableViewDataSource.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,20 +481,26 @@
 				FFBB398D2A9B7945002169C6 /* MainConstants.swift in Sources */,
 				FFBB39992A9BEA82002169C6 /* MainLossesTableDelegate.swift in Sources */,
 				FFD891852A968A7300ACA175 /* LossesEquipment.swift in Sources */,
+				FFDB5D5A2A9C0CFB001AC229 /* StatisticViewController.swift in Sources */,
+				FFDB5D5D2A9C108B001AC229 /* StatisticConstants.swift in Sources */,
 				FFBB39932A9B8E02002169C6 /* LossesCell.swift in Sources */,
+				FFDB5D612A9C1843001AC229 /* StatisticTableViewDelegate.swift in Sources */,
 				FFD891752A96610300ACA175 /* Strings.generated.swift in Sources */,
 				FFBB398F2A9B7ECB002169C6 /* HeaderConstants.swift in Sources */,
 				FFD891762A96610300ACA175 /* Assets.generated.swift in Sources */,
+				FFDB5D632A9C189F001AC229 /* StatisticTableViewDataSource.swift in Sources */,
 				FFD8917B2A96721500ACA175 /* LoadingViewController.swift in Sources */,
 				FFBB39812A98D5B8002169C6 /* Int+OptionalMinus.swift in Sources */,
 				FFBB39862A9B75AE002169C6 /* MainViewModel.swift in Sources */,
 				FFBB396D2A97BBD1002169C6 /* NetworkService.swift in Sources */,
+				FFDB5D5F2A9C162E001AC229 /* StatisticCell.swift in Sources */,
 				FFBB39882A9B76D6002169C6 /* MainViewController.swift in Sources */,
 				FFBB39722A97BC8C002169C6 /* DataService.swift in Sources */,
 				FFBB397E2A98D1EE002169C6 /* Losses.swift in Sources */,
 				FFBB39742A97C312002169C6 /* DataError.swift in Sources */,
 				FFBB398A2A9B7797002169C6 /* CurrentLossesView.swift in Sources */,
 				FFBB39952A9B90AB002169C6 /* LossesTableConstants.swift in Sources */,
+				FFDB5D652A9C1F16001AC229 /* LossesCategory.swift in Sources */,
 				FFD8913F2A96599600ACA175 /* AppDelegate.swift in Sources */,
 				FFD891812A967B7100ACA175 /* LoadingConstants.swift in Sources */,
 				FFBB399B2A9BEB90002169C6 /* MainLossesTableDataSourse.swift in Sources */,

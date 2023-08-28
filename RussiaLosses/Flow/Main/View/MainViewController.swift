@@ -37,6 +37,10 @@ class MainViewController: UIViewController {
         makeUI()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        lossesTable.selectRow(at: nil, animated: false, scrollPosition: .none)
+    }
+
     // MARK: UI
 
     private func setupBackground() {
@@ -76,7 +80,8 @@ class MainViewController: UIViewController {
     // MARK: Actions
 
     private func cellTap(_ cellIndex: Int) {
-        print(cellIndex)
+        let statisticVC = StatisticViewController(losses: viewModel.losses[cellIndex])
+        navigationController?.pushViewController(statisticVC, animated: true)
     }
 
 }

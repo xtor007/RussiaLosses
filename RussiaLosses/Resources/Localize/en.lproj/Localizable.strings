@@ -10,3 +10,20 @@
 "loading.message" = "Please wait a few seconds";
 
 "main.helpIncrease" = "Help increase this number";
+
+"category.personnel" = "Personnel";
+"category.aircraft" = "Aircraft";
+"category.helicopter" = "Helicopter";
+"category.tank" = "Tank";
+"category.APC" = "APC";
+"category.fieldArtillery" = "Field Artillery";
+"category.MRL" = "MRL";
+"category.militaryAuto" = "Military Auto";
+"category.fuelTank" = "Fuel Tank";
+"category.drone" = "Drone";
+"category.navalShip" = "Naval Ship";
+"category.antiAircreftWarfarev" = "Anti-Aircreft Warfarev";
+"category.specialEquipment" = "Special Equipment";
+"category.mobileSRBMSystem" = "Mobile SRBM System";
+"category.vehiclesAndFuelTanks" = "Vehicles and Fuel Tanks";
+"category.cruiseMissiles" = "Cruise Missiles";

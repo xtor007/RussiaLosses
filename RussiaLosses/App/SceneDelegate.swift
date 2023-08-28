@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             switch result {
             case .success(let losses):
                 let mainVC = MainViewController(viewModel: MainViewModel(losses: losses))
-                self?.window?.rootViewController = mainVC
+                self?.window?.rootViewController = UINavigationController(rootViewController: mainVC)
             case .failure(let error):
                 print(error)
             }
